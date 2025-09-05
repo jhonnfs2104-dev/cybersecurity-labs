@@ -4,7 +4,7 @@ Este documento detalla los hallazgos durante la auditoría de seguridad de la ma
 
 ## Fase 1: Reconocimiento y Escaneo
 
-El objetivo de esta fase fue identificar los servicios y puertos abiertos en la máquina para determinar posibles vectores de ataque.
+El objetivo de esta fase fue identificar los servicios y puertos abiertos en la maquina para determinar posibles vectores de ataque.
 
 ---
 
