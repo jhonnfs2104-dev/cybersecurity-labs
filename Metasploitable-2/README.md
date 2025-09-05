@@ -48,4 +48,4 @@ La explotación se llevó a cabo siguiendo una metodología clara:
 Se obtuvo una sesión de shell interactiva con los máximos privilegios del sistema (`root`). Esto se confirmó ejecutando comandos como `whoami` y `cat /etc/shadow` directamente en la máquina comprometida.
 
 **Prueba de Acceso:**
-![Prueba de Acceso Root](https://github.com/jhonnfs2104-dev/cybersecurity-labs/blob/main/Metasploitable-2/whoami.png?raw=true)
+![Prueba de Acceso Root](https://github.com/jhonnfs2104-dev/cybersecurity-labs/blob/main/Metasploitable-2/whoami.png)
