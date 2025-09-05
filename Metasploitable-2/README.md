@@ -48,4 +48,23 @@ La explotación se llevó a cabo siguiendo una metodología clara:
 Se obtuvo una sesión de shell interactiva con los máximos privilegios del sistema (`root`). Esto se confirmó ejecutando comandos como `whoami` y `cat /etc/shadow` directamente en la máquina comprometida.
 
 **Prueba de Acceso:**
-![Prueba de Acceso Root](https://github.com/jhonnfs2104-dev/cybersecurity-labs/blob/main/Metasploitable-2/whoami.png)
+
+Se confirmó el control total del sistema ejecutando los siguientes comandos, que demuestran privilegios de `root` y acceso a archivos sensibles.
+
+```bash
+whoami
+root
+
+ls -la /root/
+total 76
+drwxr-xr-x 13 root root 4096 Sep  4 22:29 .
+drwxr-xr-x 21 root root 4096 May 20  2012 ..
+-rw-------  1 root root  324 Sep  4 22:29 .Xauthority
+lrwxrwxrwx  1 root root    9 May 14  2012 .bash_history -> /dev/null
+-rw-r--r--  1 root root 2227 Oct 20  2007 .bashrc
+
+cat /etc/shadow
+root:$1$/avpfBJ1$x0z8w5UF9Iv./DR9E9Lid.:14747:0:99999:7:::
+daemon:*:14684:0:99999:7:::
+bin:*:14684:0:99999:7:::
+sys:$1$fUX6BPOt$Miyc3UpOzQJqz4s5wFD9l0:14742:0:99999:7:::
