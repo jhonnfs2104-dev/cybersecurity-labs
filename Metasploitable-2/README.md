@@ -27,3 +27,25 @@ Puerto 1524/tcp (bindshell): Se encontró un shell de root escuchando en este pu
 
 Conclusión Inicial
 La superficie de ataque de la máquina es extremadamente grande. Basado en los hallazgos, el servicio de FTP (vsftpd 2.3.4) y el bindshell en el puerto 1524 son los puntos de entrada más prometedores para la siguiente fase: Explotación.
+
+
+## Fase 2: Explotación
+
+### Objetivo
+El objetivo de esta fase fue ganar acceso al sistema explotando la vulnerabilidad `vsftpd 2.3.4` identificada durante el reconocimiento.
+
+### Herramientas Utilizadas
+* **Metasploit Framework (msfconsole):** Para buscar, configurar y ejecutar el exploit.
+
+### Pasos Realizados
+La explotación se llevó a cabo siguiendo una metodología clara:
+1.  **Búsqueda:** Se inició `msfconsole` y se utilizó el comando `search vsftpd 2.3.4` para localizar el módulo de exploit adecuado.
+2.  **Selección:** Se seleccionó el exploit `exploit/unix/ftp/vsftpd_234_backdoor` con el comando `use 3`.
+3.  **Configuración:** Se configuró la dirección IP del objetivo con el comando `set RHOSTS 192.168.3.45`.
+4.  **Ejecución:** Se lanzó el ataque con el comando `exploit`, el cual fue exitoso.
+
+### Resultados y Evidencia
+Se obtuvo una sesión de shell interactiva con los máximos privilegios del sistema (`root`). Esto se confirmó ejecutando comandos como `whoami` y `cat /etc/shadow` directamente en la máquina comprometida.
+
+**Prueba de Acceso:**
+![Prueba de Acceso Root](URL_DE_LA_IMAGEN_AQUI.png)
