@@ -1,6 +1,6 @@
 # Análisis de Metasploitable 2
 
-Este documento detalla los hallazgos durante la auditoría de seguridad de la máquina virtual Metasploitable 2.
+Este documento detalla los hallazgos durante la auditoría de seguridad de la maquina virtual Metasploitable 2.
 
 ## Fase 1: Reconocimiento y Escaneo
 
